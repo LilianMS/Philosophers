@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:50:30 by lilmende          #+#    #+#             */
-/*   Updated: 2024/12/06 20:21:21 by lilmende         ###   ########.fr       */
+/*   Updated: 2024/12/08 14:34:07 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	ph_validate_arguments(t_data *data)
 	if (data->num_philos > 200 \
 		|| data->time_to_die < 60 \
 		|| data->time_to_eat < 60 \
-		|| data->time_to_sleep < 60)
+		|| data->time_to_sleep < 60 \
+		|| data->nbr_of_meals <= 0)
 	{
 		ph_p_err(MSG_ERR);
 		printf("\n%s\n%s\n", MSG_ARG, MSG_EXS);
