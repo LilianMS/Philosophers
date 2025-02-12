@@ -6,13 +6,12 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 21:42:20 by lilmende          #+#    #+#             */
-/*   Updated: 2024/12/06 19:46:29 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:25:12 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
 
-// ativa mutex para verificar se a simulação foi parada
 int	ph_stop_sim(t_data *data)
 {
 	int	stop;
@@ -48,7 +47,7 @@ void	set_forks(pthread_mutex_t **ft, pthread_mutex_t **sc, t_philo *ph)
 	}
 }
 
-int	wait_for_time(t_philo *philo, long duration)
+int	ph_wait_for_time(t_philo *philo, long duration)
 {
 	long	t_start;
 

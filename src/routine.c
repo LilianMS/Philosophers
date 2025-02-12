@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:27:39 by lilmende          #+#    #+#             */
-/*   Updated: 2024/12/08 21:05:42 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:41:27 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	eat(t_philo *philo)
 	pthread_mutex_unlock(philo->right_fork);
 }
 
+/*
 void	sleep_and_think(t_philo *philo)
 {
 	int	time_to_think;
@@ -73,6 +74,17 @@ void	sleep_and_think(t_philo *philo)
 		time_to_think = 0;
 	ph_print_message(philo, "is thinking");
 	ph_wait_for_time(philo, time_to_think);
+}
+*/
+
+void	sleep_and_think(t_philo *philo)
+{
+	if (ph_stop_sim(philo->data))
+		return ;
+	ph_print_message(philo, "is sleeping");
+	if (!ph_wait_for_time(philo, philo->data->time_to_sleep))
+		return ;
+	ph_print_message(philo, "is thinking");
 }
 
 void	*ph_routine(void *arg)

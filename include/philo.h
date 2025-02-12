@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 20:57:16 by lilmende          #+#    #+#             */
-/*   Updated: 2024/12/06 20:28:13 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:25:12 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,6 @@ long	ph_g_rel_time(t_data *data);
 long	ph_g_time(void);
 void	ph_print_died(t_philo *philo, const char *message);
 void	set_forks(pthread_mutex_t **ft, pthread_mutex_t **sc, t_philo *ph);
-int		wait_for_time(t_philo *philo, long duration);
+int		ph_wait_for_time(t_philo *philo, long duration);
 
 #endif
