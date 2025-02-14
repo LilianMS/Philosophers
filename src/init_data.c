@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:50:30 by lilmende          #+#    #+#             */
-/*   Updated: 2025/02/12 12:32:27 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/14 18:02:22 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ph_arg_isndig(char **av)
 int	ph_validate_arguments(t_data *data)
 {
 	if (data->num_philos > 200 \
+		|| data->num_philos < 1 \
 		|| data->time_to_die < 60 \
 		|| data->time_to_eat < 60 \
 		|| data->time_to_sleep < 60 \

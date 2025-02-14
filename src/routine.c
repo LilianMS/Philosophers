@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:27:39 by lilmende          #+#    #+#             */
-/*   Updated: 2025/02/12 13:31:27 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:38:40 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,21 +58,22 @@ void	eat(t_philo *philo)
 
 void	sleep_and_think(t_philo *philo)
 {
-	int	time_to_think;
+	// int	time_to_think;
 
 	if (ph_stop_sim(philo->data))
 		return ;
 	ph_print_message(philo, "is sleeping");
 	if (!ph_wait_for_time(philo, philo->data->time_to_sleep))
 		return ;
-	time_to_think = philo->data->time_to_die \
-		- philo->data->time_to_eat - philo->data->time_to_sleep;
-	if (time_to_think > 5)
-		time_to_think = 5;
-	else if (time_to_think < 0)
-		time_to_think = 0;
+	// time_to_think = philo->data->time_to_die \
+	// 	- philo->data->time_to_eat - philo->data->time_to_sleep;
+	// if (time_to_think > 5)
+	// 	time_to_think = 5;
+	// else if (time_to_think < 0)
+	// 	time_to_think = 0;
 	ph_print_message(philo, "is thinking");
-	ph_wait_for_time(philo, time_to_think);
+	// ph_wait_for_time(philo, time_to_think);
+	usleep(1000);
 }
 
 // void	sleep_and_think(t_philo *philo)

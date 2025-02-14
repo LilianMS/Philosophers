@@ -6,12 +6,12 @@
 #    By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/01 20:52:42 by lilmende          #+#    #+#              #
-#    Updated: 2025/02/12 12:20:29 by lilmende         ###   ########.fr        #
+#    Updated: 2025/02/14 17:07:26 by lilmende         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
-FLAGS = -Wextra -Wall -Werror -g -pthread
+FLAGS = -Wextra -Wall -Werror -g
 LIBFT = ./libs/libft
 HEADERS = ./include
 BIN = ./bin
@@ -51,7 +51,7 @@ $(NAME): $(OBJS)
 	@echo " "
 	@echo "Creating file $(NAME) ..."
 	@echo " "
-	@$(CC) $(OBJS) $(INCLUDE) -o $(NAME)
+	@$(CC) $(OBJS) $(INCLUDE) -o $(NAME) -lpthread
 	@echo "${GREEN}Compilation successful!${RESET}"
 
 clean:

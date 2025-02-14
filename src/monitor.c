@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 21:18:29 by lilmende          #+#    #+#             */
-/*   Updated: 2024/12/06 20:37:48 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:38:06 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	*ph_monitor_routine(void *arg)
 			pthread_mutex_unlock(&data->sim_mutex);
 			break ;
 		}
-		usleep(100);
+		usleep(10000);
 	}
 	return (NULL);
 }
