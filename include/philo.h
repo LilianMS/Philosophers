@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 20:57:16 by lilmende          #+#    #+#             */
-/*   Updated: 2025/02/12 12:25:12 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/17 10:19:22 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/time.h>
+# include <limits.h>
 
 # define MSG_ERR "Error: philosophers <= 0 or > 200 or times <= 60 ms."
 # define MSG_ARG "Use: ./philo [n_ph] [t_die] [t_eat] [t_sleep] [n_of_meals]*"

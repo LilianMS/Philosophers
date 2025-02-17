@@ -6,7 +6,7 @@
 /*   By: lilmende <lilmende@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 21:42:20 by lilmende          #+#    #+#             */
-/*   Updated: 2025/02/14 16:33:20 by lilmende         ###   ########.fr       */
+/*   Updated: 2025/02/17 09:42:35 by lilmende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ph_wait_for_time(t_philo *philo, long duration)
 	{
 		if (ph_stop_sim(philo->data))
 			return (0);
-		usleep(50);
+		usleep(200); ////
 	}
 	return (1);
 }
